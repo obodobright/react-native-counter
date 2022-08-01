@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Button, Linking } from "react-native";
+import Layout from "./src/Layout";
+import NewLayout from "./src/layouts";
 
 const App = () => {
   const [name, setName] = useState("Bright");
   const [count, setCount] = useState(0);
+  const [numLimit, setNumLimit] = useState(false);
 
   const increment = () => {
     setCount((prevCount) => prevCount + 1);
@@ -17,7 +20,7 @@ const App = () => {
   };
   return (
     <>
-      <View style={styles.body}>
+      {/* <View style={styles.body}>
         <Text style={styles.text}>Heelo {name}, Welcome!</Text>
         <Button color={"blue"} title="CLick Me" onPress={updateName}></Button>
 
@@ -25,10 +28,26 @@ const App = () => {
         <Button color="green" title="Increment" onPress={increment}>
           Increament
         </Button>
-        <Button color="red" title="Decrement" onPress={decrement}>
-          Decreament
-        </Button>
-      </View>
+        {count === 0 ? (
+          <Button color="red" title="Decrement" disabled onPress={decrement}>
+            Decreament
+          </Button>
+        ) : (
+          <Button color="red" title="Decrement" onPress={decrement}>
+            Decreament
+          </Button>
+        )}
+        <Text>Numberof time clicked is {count} </Text>
+        <View style={btns}>
+          <Button title="Like"></Button>
+        </View>
+      </View> */}
+      {/* external linking
+
+      <Button title="youtube btn" onPress={() => Linking.openUrl()}></Button>
+ */}
+      {/* <Layout /> */}
+      <NewLayout />
     </>
   );
 };
@@ -41,7 +60,7 @@ const styles = StyleSheet.create({
   incrementBtn: {
     backgroundColor: "green",
     color: "white",
-    margin: "10px",
+    margin: 10,
   },
   decrementBtn: {
     backgroundColor: "red",
@@ -49,8 +68,13 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   body: {
-    flex: 1,
-    backgroundColor: "white",
+    width: "100%",
+    height: "100%",
+    minHeight: 30,
+    backgroundColor: "gray",
+    // backgroundColor: "white",
+    borderWidth: 20,
+    borderColor: "red",
     color: "white",
     alignItems: "center",
     justifyContent: "center",
@@ -59,8 +83,19 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: "blue",
     margin: 10,
+    textTransform: "uppercase",
+    textAlign: "center",
     // fontWeight: 500,
   },
+  btn: {
+    backgroundColor: "red",
+    width: 300,
+    height: 50,
+    // padding: 20,
+    color: "green",
+  },
 });
+
+const btns = StyleSheet.compose(styles.btn, styles.incrementBtn);
 
 export default App;

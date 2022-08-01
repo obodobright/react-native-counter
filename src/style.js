@@ -1,0 +1,85 @@
+import { StyleSheet } from "react-native";
+
+export const style = StyleSheet.create({
+  navbar: {
+    backgroundColor: "red",
+
+    width: "100%",
+    height: 100,
+    padding: 10,
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  navText: {
+    fontSize: 30,
+    // marginTop: 30,
+    backgroundColor: "green",
+    padding: 5,
+    color: "white",
+    fontWeight: "800",
+    fontFamily: "Roboto",
+    fontStyle: "italic",
+  },
+  walletIcon: {
+    width: 20,
+    height: 20,
+    padding: 5,
+
+    borderTopEndRadius: 10,
+    borderTopLeftRadius: 20,
+    borderTopStartRadius: 10,
+    borderTopRightRadius: 10,
+    backgroundColor: "transparent",
+    color: "white",
+    borderWidth: 2,
+    borderColor: "white",
+    // marginTop: 30,
+  },
+  profile: {
+    width: 25,
+    height: 25,
+    borderRadius: 50,
+    padding: 5,
+
+    // backgroundColor: "white",
+    // borderWidth: 2,
+    // borderColor: "white",
+    // marginTop: 30,
+  },
+  container: {
+    width: "100%",
+    minHeight: 500,
+    backgroundColor: "transparent",
+    display: "flex",
+    // justifyContent: "center",
+    alignItems: "center",
+    // margin: 10,
+  },
+  balance: {
+    width: "90%",
+    height: 80,
+    backgroundColor: "rgb(178,178,179)",
+    backgroundColor:
+      "linear-gradient(90deg, rgba(178,178,179,1) 0%, rgba(92,92,96,1) 35%, rgba(147,147,147,1) 100%)",
+    margin: 20,
+    borderRadius: 10,
+    padding: 15,
+  },
+  setting: {
+    width: 15,
+    height: 15,
+    borderRadius: 50,
+    backgroundColor: "white",
+    borderWidth: 2,
+    borderColor: "lightgray",
+  },
+  balanceContent: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    color: "white",
+  },
+});
