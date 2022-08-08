@@ -53,6 +53,7 @@ const NewLayout = () => {
             <Text>{item.name}</Text>
           </View>
         )}
+        refreshControl={<RefreshControl refresh={true} />}
       />
 
       {/* <ScrollView

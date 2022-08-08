@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Button, Linking } from "react-native";
+import { InputField } from "./src/Input";
 import Layout from "./src/Layout";
 import NewLayout from "./src/layouts";
+import { Section } from "./src/SectionList";
+import MyCart from "./src/component/CartDesign";
 
 const App = () => {
   const [name, setName] = useState("Bright");
@@ -47,7 +50,9 @@ const App = () => {
       <Button title="youtube btn" onPress={() => Linking.openUrl()}></Button>
  */}
       {/* <Layout /> */}
-      <NewLayout />
+      {/* <NewLayout /> */}
+      {/* <Section /> */}
+      <MyCart />
     </>
   );
 };
