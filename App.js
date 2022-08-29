@@ -5,6 +5,8 @@ import Layout from "./src/Layout";
 import NewLayout from "./src/layouts";
 import { Section } from "./src/SectionList";
 import MyCart from "./src/component/CartDesign";
+import ImagePrac from "./src/component/CartDesign/image";
+import ParentComponent from "./src/component/Props";
 
 const App = () => {
   const [name, setName] = useState("Bright");
@@ -52,7 +54,7 @@ const App = () => {
       {/* <Layout /> */}
       {/* <NewLayout /> */}
       {/* <Section /> */}
-      <MyCart />
+      <ParentComponent />
     </>
   );
 };

@@ -13,7 +13,7 @@ import {
   Pressable,
 } from "react-native";
 import { useState } from "react";
-export const InputField = () => {
+export const InputField = ({ goNext }) => {
   const [input, setInput] = useState("");
   const [inputt, setInputt] = useState("");
   const [password, setPassword] = useState("");
@@ -21,6 +21,7 @@ export const InputField = () => {
 
   const handleSubmit = () => {
     ToastAndroid.show("Login successfully", ToastAndroid.LONG);
+    goNext();
     // Alert.alert("Login info", "You have successfully loggedin!", [
     //   { text: "Done", onPress: () => console.log("done") },
     //   { text: "Cancel", onPress: () => console.log("existed") },
